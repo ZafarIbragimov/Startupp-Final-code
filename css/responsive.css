@@ -1,0 +1,391 @@
+@media (max-width: 1120px) {
+    .saving_section .detail-box {
+        padding: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .user_option {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 10px;
+
+    }
+
+    .custom_nav-container {
+        flex-direction: row;
+    }
+
+    .custom_nav-container .navbar-nav {
+        align-items: center;
+    }
+
+    #navbarSupportedContent .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+
+    .slider_section .detail-box {
+        padding-left: 0;
+    }
+
+    .slider_section .detail-box h1 {
+        font-size: 3rem;
+    }
+
+    .slider_section .img-box {
+        padding: 0;
+    }
+
+    .saving_section .row {
+        flex-direction: column-reverse;
+    }
+
+    .saving_section .detail-box {
+
+        margin-bottom: 30px;
+    }
+
+    .client_section .box {
+        margin: 15px 25px;
+    }
+
+    .client_section .carousel_btn-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+    }
+
+    .client_section .carousel-control-prev,
+    .client_section .carousel-control-next {
+        position: unset;
+        margin: 0 2.5px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_area {
+        padding: 0 25px;
+    }
+
+    .slider_section .img-box {
+        margin-bottom: 45px;
+    }
+
+    .saving_section,
+    .gift_section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .gift_section .box {
+        padding: 45px 0;
+    }
+
+    .gift_section .img-box {
+        padding: 0 15px;
+        margin-bottom: 45px;
+    }
+
+    .info_section .row>div {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .info_section {
+        margin: 0 25px 25px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .contact_section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .saving_section .detail-box,
+    .gift_section .detail-box {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 420px) {}
+
+@media (max-width: 376px) {}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgth@300;400;500;600;700;800,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.asosiy{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    /* background: #333; */
+    border-radius: 20px;
+    border: solid 2px white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    gap: 30px;
+    margin-top: 100px;
+}
+.card:hover{
+    width: 600px;
+    transition-delay: 0.5s;
+}
+.card .circle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px white;
+    background: #191919;
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s,1s;
+    filter: drop-shadow(0 0 10px var(white)) drop-shadow(0 0 60px var(white));
+}
+.card:hover .circle::before{
+    width: 100%;
+    transition-delay: 0.5s;
+    height: 100%;
+    border-radius: 20px;
+    background: #f89cab;
+}
+.card .circle .logo{
+    position: relative;
+    width: 150px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.card:hover .circle .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+.card .product_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0) rotate(315deg);
+    height: 100px;
+    transition: 0.5s ease-in-out;
+}
+.card:hover .product_img{
+    transition-delay: 0.75s;
+    transform: translate(-50%,-50%) scale(1) rotate(15deg);
+    top: 45%;
+    left: 75%;
+    height: 500px;
+}
+.card .content{
+    position:absolute;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+.card:hover .content{
+    transition-delay: 0.75s;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.4em;
+    line-height: 1em;
+}
+.card .content p{
+    color: #fff;
+}
+.card .content a{
+    position: relative;
+    color: #111;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Kichik ekranlar uchun */
+@media (max-width: 768px) {
+    .asosiy {
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .card {
+        width: 90%; /* Mobil qurilmalar uchun to'liq kenglik */
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 500px;
+        margin-top: 70px;
+    }
+    .card:hover {
+        width: 90%; /* Animatsiya kengligi o'zgarmaydi */
+    }
+    .card .circle::before,
+    .card:hover .circle::before {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+
+    }
+    .card .product_img {
+        margin-top: 20px;
+        top: 190px;
+        left: 50%;
+        height: 150px; /* Mobil qurilmada rasm o'lchami */
+        flex-direction: column;
+
+    }
+    .card:hover .product_img {
+        top: 50%;
+        left: 50%;
+        height: 150px;
+        flex-direction: column;
+
+    }
+    .card .content {
+        width: 100%; /* To'liq kenglik */
+        left: 0;
+        padding: 20px;
+        flex-direction: column;
+
+    }
+}
+
+/* Planshetlar uchun */
+@media (max-width: 992px) and (min-width: 769px) {
+    .asosiy {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 45%; /* Planshetlar uchun ikkita ustun */
+        height: 400px; /* Balandroq kartochka */
+        text-align: center;
+    }
+    .card:hover {
+        width: 45%; /* Animatsiya kengligi o'zgarmaydi */
+    }
+    .card .product_img {
+        height: 100px; /* Planshetlarda rasm o'lchami */
+    }
+    .card:hover .product_img {
+        top: 45%;
+        left: 75%;
+        height: 200px;
+
+    }
+    .logo{
+        text-align: center;
+        margin-right:75px ;
+        margin-bottom: 35px;
+    }
+}
+
+/* Umumiy uslublar */
+.card .content h2,
+.card .content p,
+.card .content a {
+    text-align: center; /* Matnni markazga joylashtirish */
+}
+
+@media (max-width: 767px)and (min-width: 769px){
+    .asosiy {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 45%; /* Planshetlar uchun ikkita ustun */
+        height: 400px; /* Balandroq kartochka */
+        text-align: center;
+    }
+    .card:hover {
+        width: 45%; /* Animatsiya kengligi o'zgarmaydi */
+    }
+    .card .product_img {
+        height: 100px; /* Planshetlarda rasm o'lchami */
+    }
+    .card:hover .product_img {
+        top: 45%;
+        left: 75%;
+        height: 200px;
+
+    }
+    .logo{
+        text-align: center;
+        margin-right:75px ;
+        margin-bottom: 35px;
+        
+    }
+}
+
+/* Umumiy uslublar */
+.card .content h2,
+.card .content p,
+.card .content a {
+    text-align: center; /* Matnni markazga joylashtirish */
+}
+
